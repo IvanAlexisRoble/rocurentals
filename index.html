@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCU RENTALS - Gestión de Alojamientos Turísticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container"> <div class="logo">
+                <img src="img/logo-rocu-rentals.png" alt="Logo ROCU RENTALS">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="propiedades.html">Propiedades</a></li>
+                    <li><a href="info-servicios.html">Servicios</a></li>
+                    <li><a href="servicios.html">Tarifas</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <img src="img/hero-image.jpg" alt="Imagen destacada de alquiler turístico">
+            <div class="hero-content">
+                <h1>Bienvenido a Rocu Rentals Convierte tu propiedad en una fuente de ingresos segura y rentable.</h1>
+                <p>Nos especializamos en la gestión de alquileres vacacionales en España, ayudando a propietarios como tú a maximizar sus ingresos sin preocupaciones. Con nuestra experiencia y dedicación, transformamos tu inmueble en un alojamiento turístico altamente rentable, asegurando que cada detalle esté cubierto para que tú solo disfrutes de los beneficios.</p>
+                <a href="contacto.html" class="btn btn-primary">Te llamamos</a>
+            </div>
+        </section>
+
+        <section id="servicios-destacados">
+            <div class="container"> <h2>¿Por qué elegir Rocu Rentals?</h2>
+                <div class="servicios-container"> <div class="servicio">
+                        <img src="img/servicio1.svg">
+                        <h3>Mayor rentabilidad para tu propiedad</h3>
+                        <p>El mercado turístico en España ofrece tarifas diarias más altas que el alquiler tradicional. Con nuestra estrategia optimizada, garantizamos la máxima ocupación y rentabilidad, especialmente en temporada alta.</p>
+                    </div>
+                    <div class="servicio">
+                        <img src="img/servicio2.svg">
+                        <h3>Gestión profesional integral</h3>
+                        <p>Nos encargamos de todo: desde la promoción de tu propiedad en las principales plataformas como Airbnb, Booking.com y Vrbo, hasta la comunicación con los huéspedes, limpieza, mantenimiento y atención personalizada. ¡Tú solo recibes las ganancias!</p>
+                    </div>
+                    <div class="servicio">
+                        <img src="img/servicio3.svg">
+                        <h3>Seguridad y selección de huéspedes</h3>
+                        <p>Olvídate de impagos y problemas con inquilinos irresponsables. Verificamos cada reserva y filtramos a los huéspedes para garantizar estadías seguras y sin riesgos para tu propiedad.</p>
+                    </div>
+                    <div class="servicio">
+                        <img src="img/servicio4.svg">
+                        <h3>Flexibilidad total</h3>
+                        <p>Tienes el control absoluto sobre tu propiedad. Decide en qué fechas quieres alquilar y cuándo deseas utilizarla para tu disfrute personal. Nos adaptamos a tus necesidades.</p>
+                    </div>
+                    <div class="servicio">
+                        <img src="img/servicio5.svg">
+                        <h3>Cumplimiento legal sin preocupaciones</h3>
+                        <p>Gestionamos todas las licencias y requisitos legales para que tu alquiler turístico opere sin complicaciones y en conformidad con la normativa vigente.</p>
+                    </div>
+                 </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-top">
+            <h2>¡Empieza hoy con Rocu Rentals!</h2>
+            <p>No dejes que tu propiedad pierda su potencial. Conviértela en una fuente de ingresos segura, sin los dolores de cabeza del alquiler tradicional.</p>
+            <p>Contáctanos hoy y descubre cómo podemos ayudarte a rentabilizar tu vivienda sin complicaciones.</p>
+            <a href="contacto.html" class="footer-btn">Contáctanos</a>
+          </div>
+      
+          <div class="footer-bottom">
+            <ul class="footer-links">
+              <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+              <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+              <li><a href="politica-cookies.html">Política de Cookies</a></li>
+              <li><a href="aviso-legal.html">Aviso Legal</a></li>
+            </ul>
+            <p class="footer-copy">© 2025 ROCU RENTALS. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+      
+    
+
+    <script src="script.js"></script>
+    <!-- POPUP COOKIES -->
+<div id="cookie-popup" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #fff; color: #000; border: 1px solid #ccc; padding: 20px; border-radius: 12px; z-index: 9999; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); max-width: 600px; margin: auto;">
+    <p>Usamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptás nuestra <a href="/politica-cookies.html" target="_blank">Política de Cookies</a>.</p>
+    <button id="accept-cookies" style="margin-top: 10px; padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 8px; cursor: pointer;">Aceptar</button>
+  </div>
+  
+  <script>
+    // Mostrar popup solo si no se aceptaron las cookies aún
+    window.onload = function() {
+      if (!localStorage.getItem("cookiesAccepted")) {
+        document.getElementById("cookie-popup").style.display = "block";
+      }
+  
+      document.getElementById("accept-cookies").onclick = function() {
+        localStorage.setItem("cookiesAccepted", true);
+        document.getElementById("cookie-popup").style.display = "none";
+      };
+    };
+  </script>
+  
+</body>
+</html>

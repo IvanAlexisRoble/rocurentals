@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ROCU RENTALS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo-rocu-rentals.png" alt="Logo ROCU RENTALS">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="propiedades.html">Propiedades</a></li>
+                    <li><a href="info-servicios.html">Servicios</a></li>
+                    <li><a href="servicios.html">Tarifas</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contacto">
+            <div class="container">
+                <h1>Contacto</h1>
+                <p>Si tienes alguna pregunta o quieres más información sobre nuestros servicios, no dudes en contactarnos.</p>
+
+                <div class="formulario-contacto">
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono (Opcional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <div id="form-status" style="margin-top: 1rem; font-weight: bold;"></div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+
+                <div class="info-contacto">
+                    <h2>Información de Contacto</h2>
+                    <p><strong>Teléfono:</strong> +34 665103741 +34 603039749</p> <p><strong>Email:</strong> rocurentals@gmail.com</p> <p><strong>Dirección:</strong> Calle Llebeig 5 piso 9 puerta L, 03570, Villajoyosa, Alicante</p> </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-top">
+            <h2>¡Empieza hoy con Rocu Rentals!</h2>
+            <p>No dejes que tu propiedad pierda su potencial. Conviértela en una fuente de ingresos segura, sin los dolores de cabeza del alquiler tradicional.</p>
+            <p>Contáctanos hoy y descubre cómo podemos ayudarte a rentabilizar tu vivienda sin complicaciones.</p>
+            <a href="contacto.html" class="footer-btn">Contáctanos</a>
+          </div>
+      
+          <div class="footer-bottom">
+            <ul class="footer-links">
+              <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+              <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+              <li><a href="politica-cookies.html">Política de Cookies</a></li>
+              <li><a href="aviso-legal.html">Aviso Legal</a></li>
+            </ul>
+            <p class="footer-copy">© 2025 ROCU RENTALS. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>
