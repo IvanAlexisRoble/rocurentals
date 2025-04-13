@@ -774,7 +774,7 @@ nav a.active {
 
     /* Ajuste tamaño iconos en info-servicios para pantallas muy pequeñas */
     .servicio-icono {
-        max-height: 120px; /* Iconos más pequeños */
+        max-height: 300px; /* Iconos más pequeños */
     }
 
     /* Ajustes formulario heredados del original */
