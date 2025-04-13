@@ -612,7 +612,7 @@ nav a.active {
         max-height: none; /* Permitir que el header crezca */
         height: auto; /* Altura automática */
         min-height: 55px; /* Altura mínima para touch */
-        padding: 0 0.5rem; /* Padding lateral en el header */
+        padding: 0rem; /* Padding lateral en el header */
     }
     header .container {
         display: flex; /* Asegurar flex */
@@ -765,7 +765,7 @@ nav a.active {
     /* h1-h6, p, etc. heredan de 768px o base si no se especifican */
 
     header { min-height: 60px; } /* Ajuste altura mínima */
-    .logo-mobile { max-height: 110px; } /* Logo más pequeño */
+    .logo-mobile { max-height: 115px; } /* Logo más pequeño */
     .mobile-menu-button { font-size: 1.6rem; } /* Botón más pequeño */
 
     .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; } /* Original */
