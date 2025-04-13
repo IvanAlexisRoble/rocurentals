@@ -541,6 +541,17 @@ nav a.active {
     .formulario-contacto .form-row { flex-direction: column; gap: 0; }
     .formulario-contacto .form-group { margin-bottom: 1rem; }
     .formulario-contacto { padding: 1.5rem; }
+    /* ... otras reglas móviles ... */
+
+    header {
+        max-height: none; /* Permite que el header crezca en móviles */
+        height: auto; /* Asegura altura automática */
+        padding-top: 0.5rem; /* Añade espacio arriba si quieres */
+        padding-bottom: 0.5rem; /* Añade espacio abajo si quieres */
+    }
+
+    /* ... otras reglas móviles ... */
+
 }
 
 @media (max-width: 576px) {
