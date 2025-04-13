@@ -619,9 +619,9 @@ nav a.active {
         align-items: center; /* Centrar verticalmente */
         justify-content: space-between; /* <<-- Alinear logo izq, botón der */
         width: 100%; /* Ocupar ancho */
-        padding-left: 0.5rem;  /* Padding interno */
-        padding-right: 0.5rem;
-        gap: 0.5rem; /* Espacio entre logo y botón */
+        padding-left: 0rem;  /* Padding interno */
+        padding-right: 0rem;
+        gap: 0rem; /* Espacio entre logo y botón */
         /* Quitar márgenes/paddings específicos del original si los hubiera */
         margin-left: 0;
         margin-right: 0;
@@ -765,7 +765,7 @@ nav a.active {
     /* h1-h6, p, etc. heredan de 768px o base si no se especifican */
 
     header { min-height: 60px; } /* Ajuste altura mínima */
-    .logo-mobile { max-height: 100px; } /* Logo más pequeño */
+    .logo-mobile { max-height: 110px; } /* Logo más pequeño */
     .mobile-menu-button { font-size: 1.6rem; } /* Botón más pequeño */
 
     .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; } /* Original */
