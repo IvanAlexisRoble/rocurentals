@@ -764,8 +764,8 @@ nav a.active {
     /* Tamaños de fuente del original */
     /* h1-h6, p, etc. heredan de 768px o base si no se especifican */
 
-    header { min-height: 50px; } /* Ajuste altura mínima */
-    .logo-mobile { max-height: 40px; } /* Logo más pequeño */
+    header { min-height: 60px; } /* Ajuste altura mínima */
+    .logo-mobile { max-height: 100px; } /* Logo más pequeño */
     .mobile-menu-button { font-size: 1.6rem; } /* Botón más pequeño */
 
     .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; } /* Original */
