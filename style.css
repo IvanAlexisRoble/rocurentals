@@ -739,8 +739,8 @@ nav a.active {
 
     /* Ajusta el tamaño del logo SÓLO en móvil */
     .logo img {
-        max-width: 400px; /* O 200px, el tamaño que te guste para móvil */
-        height: auto; /* Mantiene proporción */
+        max-width: 300px; /* O 200px, el tamaño que te guste para móvil */
+        height: 50px; /* Mantiene proporción */
         margin: 0; /* Resetea margen si lo tenía */
     }
 
