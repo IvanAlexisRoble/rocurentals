@@ -711,3 +711,138 @@ nav a.active {
         font-size: 1.15rem;
     }
 }
+/* ============================================================ */
+/* AÑADIR ESTE BLOQUE AL FINAL DE TU ARCHIVO style.css ORIGINAL */
+/* ============================================================ */
+
+/* Regla GLOBAL para ocultar botón hamburguesa en escritorio por defecto */
+/* Asegúrate de que no tengas otra regla para .mobile-menu-button fuera de media queries */
+.mobile-menu-button {
+    display: none; /* Oculto en escritorio */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #00003c; /* Color del icono - ajústalo si tu fondo cambia */
+    padding: 0.5rem;
+    line-height: 1; /* Evita altura extra */
+}
+
+/* --- Media Query para Móviles (768px o menos) --- */
+/* Si ya tienes un @media (max-width: 768px) en tu CSS original, */
+/* añade las siguientes reglas DENTRO de ese bloque existente. */
+/* Si NO tienes un bloque @media (max-width: 768px), añade el bloque completo: */
+
+@media (max-width: 768px) {
+
+    /* --- Ajustes Header y Menú Hamburguesa --- */
+
+    /* Cambia el layout del contenedor del header para fila y espacio entre logo/botón */
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* Asegura padding si es necesario */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Ajusta el tamaño del logo SÓLO en móvil */
+    .logo img {
+        max-width: 180px; /* O 200px, el tamaño que te guste para móvil */
+        height: auto; /* Mantiene proporción */
+        margin: 0; /* Resetea margen si lo tenía */
+    }
+
+    /* Muestra el botón hamburguesa SÓLO en móvil */
+    .mobile-menu-button {
+        display: block; /* Mostrar el botón */
+    }
+
+    /* Prepara el contenedor <nav> pero oculta la lista <ul> */
+    nav {
+        order: 3; /* Asegura que visualmente vaya después del botón */
+        width: 100%; /* Necesario para posicionar la lista ul debajo */
+        position: static; /* O relative si necesitas para la lista */
+    }
+
+    nav ul {
+        display: none; /* OCULTA el menú por defecto en móvil */
+        flex-direction: column; /* Apilar verticalmente cuando sea visible */
+        position: absolute; /* Sacar del flujo normal para superponer */
+        top: 50px; /* Distancia desde arriba = altura del header. ¡AJUSTA SI TU HEADER MIDE DIFERENTE! */
+        left: 0;
+        width: 100%;
+        background-color: #6cace4; /* Color de fondo del menú desplegado */
+        padding: 0; /* Resetear padding */
+        margin: 0; /* Resetear margen */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+        z-index: 999; /* Poner por encima de otro contenido */
+        border-top: 1px solid #ffd700; /* Borde superior opcional */
+    }
+
+    /* Estilo para cuando el menú es visible (se añade/quita con JS) */
+    nav ul.menu-visible {
+        display: flex; /* O display: block; - flex es útil si quieres alinear items */
+    }
+
+    /* Estilos de los elementos de la lista y enlaces en el menú desplegable */
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block; /* Ocupar todo el ancho */
+        padding: 1rem; /* Espacio para tocar */
+        color: #00003c; /* Color de texto */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separador */
+        font-weight: 600;
+        font-size: 1.1rem; /* Tamaño de fuente */
+        text-decoration: none; /* Asegurar que no hay subrayado */
+    }
+    nav ul li:last-child a {
+        border-bottom: none; /* Quitar borde al último */
+    }
+    nav ul li a:hover { /* Efecto hover (útil si se ve en tablet no táctil) */
+        background-color: rgba(255, 215, 0, 0.1);
+    }
+    nav ul li a.active { /* Estilo del enlace activo en móvil */
+        color: #ffd700;
+        font-weight: bold;
+        background-color: rgba(0, 0, 60, 0.1);
+    }
+
+    /* --- Otros Ajustes Específicos para Móvil --- */
+
+    /* Ajuste tamaño iconos en la sección de info-servicios */
+    .servicio-icono {
+         width: 80px;  /* El tamaño que decidiste para móvil */
+         height: 80px; /* El tamaño que decidiste para móvil */
+         /* No modifiques otros márgenes aquí si ya estaban bien en escritorio */
+     }
+
+    /* Ajuste layout y estilo de los enlaces del footer */
+    .footer-links {
+        flex-direction: column; /* Apilar verticalmente */
+        align-items: center;   /* Centrar horizontalmente */
+        gap: 1rem;             /* Espacio vertical */
+        /* margin-bottom ya debería estar en la regla original */
+    }
+    .footer-links a {
+        font-size: 1rem;      /* Tamaño de fuente móvil */
+        padding: 0.25rem 0;   /* Pequeño padding vertical */
+        color: #93c5fd;     /* Reafirmar color si fuera necesario */
+    }
+
+    /* AÑADE AQUÍ CUALQUIER OTRA REGLA CSS */
+    /* QUE NECESITES *SOLO* PARA LA VISTA MÓVIL */
+    /* Y QUE NO AFECTE A LA VISTA DE ESCRITORIO */
+
+
+} /* --- FIN de @media (max-width: 768px) --- */
+
+/* ============================================================ */
+/* FIN DEL BLOQUE PARA AÑADIR AL FINAL DE style.css             */
+/* ============================================================ */
