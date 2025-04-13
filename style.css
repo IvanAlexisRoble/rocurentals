@@ -767,8 +767,7 @@ nav a.active {
         flex-shrink: 1; /* Permitir que encoja si es necesario */
         overflow: hidden; /* Evita desbordamientos */
          /* Opcional: centrar verticalmente la imagen si el div tiene altura */
-         display: flex;
-         align-items: center;
+         
     }
 
     /* La imagen del logo móvil ocupa su contenedor */
