@@ -551,6 +551,16 @@ nav a.active {
     }
 
     /* ... otras reglas móviles ... */
+    /* ... (otras reglas que ya tienes aquí como header .container { flex-direction: column; } ) ... */
+
+    /* AÑADE ESTAS LÍNEAS PARA AJUSTAR EL LOGO EN MÓVILES */
+    .logo img {
+        max-width: 200px;  /* O el tamaño que prefieras, ej: 180px, 220px */
+        height: auto;     /* Importante para mantener la proporción al cambiar el ancho */
+        margin: 0 auto;   /* Opcional: Centra el logo si el contenedor es más ancho */
+    }
+
+    /* ... (más reglas si las tienes) ... */
 
 }
 
