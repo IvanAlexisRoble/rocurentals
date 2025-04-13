@@ -738,7 +738,6 @@ nav a.active {
     /* Cambia el layout del contenedor del header para fila y espacio entre logo/botón */
     header .container {
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
         /* Asegura padding si es necesario */
         padding-left: 1rem;
@@ -747,7 +746,7 @@ nav a.active {
 
     /* Ajusta el tamaño del logo SÓLO en móvil */
     .logo img {
-        max-width: 180px; /* O 200px, el tamaño que te guste para móvil */
+        max-width: 250px; /* O 200px, el tamaño que te guste para móvil */
         height: auto; /* Mantiene proporción */
         margin: 0; /* Resetea margen si lo tenía */
     }
@@ -755,6 +754,7 @@ nav a.active {
     /* Muestra el botón hamburguesa SÓLO en móvil */
     .mobile-menu-button {
         display: block; /* Mostrar el botón */
+        margin-left: auto;
     }
 
     /* Prepara el contenedor <nav> pero oculta la lista <ul> */
