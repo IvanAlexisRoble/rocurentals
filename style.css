@@ -63,10 +63,28 @@ header .container {
     padding-right: 0%;
 }
 
-.logo img {
-    max-width: 800px;
-    height: 50px;
-}
+/* --- LOGO STYLES --- */
+
+/* Contenedor del logo (opcional, si necesitas estilos específicos) */
+.logo {
+    line-height: 0; /* Ayuda a eliminar espacio extra debajo de las imágenes */
+  }
+  
+  /* Estilo para el logo de ESCRITORIO (Visible por defecto) */
+  .logo-desktop {
+      display: inline-block; /* O block si prefieres */
+      max-width: 800px; /* Mantenemos el tamaño original de escritorio */
+      height: 50px;
+      vertical-align: middle; /* Alineación vertical si es necesario */
+  }
+  
+  /* Estilo para el logo MÓVIL (Oculto por defecto) */
+  .logo-mobile {
+      display: none; /* Oculto en la vista de escritorio */
+      max-width: 100%; /* Asegura que no se desborde en contenedores pequeños */
+      height: auto;   /* Mantiene la proporción del logo móvil */
+      vertical-align: middle; /* Alineación vertical si es necesario */
+  }
 
 nav ul { list-style: none; display: flex; }
 nav ul li { margin-left: 2rem; }
@@ -738,11 +756,26 @@ nav a.active {
     }
 
     /* Ajusta el tamaño del logo SÓLO en móvil */
-    .logo img {
-        max-width: 300px; /* O 200px, el tamaño que te guste para móvil */
-        height: 50px; /* Mantiene proporción */
-        margin: 0; /* Resetea margen si lo tenía */
-    }
+    
+        /* ... otras reglas móviles existentes ... */
+    
+        /* Intercambio de visibilidad de logos en móvil */
+        .logo-desktop {
+            display: none; /* Oculta el logo de escritorio en móvil */
+        }
+    
+        .logo-mobile {
+            display: inline-block; /* Muestra el logo móvil */
+            /* Si tu logo móvil ya tiene el tamaño correcto, height:auto es suficiente. */
+            /* Si necesitas limitar su tamaño MÁXIMO en móvil, puedes añadir: */
+            /* max-width: 250px; */ /* Ajusta este valor si es necesario */
+        }
+    
+         /* Asegúrate de ELIMINAR o comentar cualquier regla antigua como: */
+         /* .logo img { max-width: 250px; height: auto; margin: 0; } */
+    
+        /* ... resto de reglas móviles ... */
+    
 
     /* Muestra el botón hamburguesa SÓLO en móvil */
     .mobile-menu-button {
