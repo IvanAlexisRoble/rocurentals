@@ -683,7 +683,9 @@ nav a.active {
         padding: 1.5rem 1rem;
     }
     .servicio-icono {
-        flex-basis: 100%; max-width: 450px; margin: 0 auto;
+        height: 200px;
+        width: 200px;
+        margin-bottom: 1rem;
     }
      .servicio-detalle-card h3 {
         font-size: 1.2rem;
