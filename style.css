@@ -84,25 +84,25 @@ nav a.active {
     padding: 3rem 1rem;
     font-family: 'Segoe UI', sans-serif;
   }
-  
+
   .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
   }
-  
+
   .footer-top h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #facc15; /* Amarillo dorado */
   }
-  
+
   .footer-top p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: #d1d5db;
   }
-  
+
   .footer-btn {
     display: inline-block;
     margin-top: 1rem;
@@ -114,17 +114,17 @@ nav a.active {
     text-decoration: none;
     transition: background-color 0.3s ease;
   }
-  
+
   .footer-btn:hover {
     background-color: #ffd700;
   }
-  
+
   .footer-bottom {
     margin-top: 3rem;
     border-top: 1px solid #374151;
     padding-top: 1.5rem;
   }
-  
+
   .footer-links {
     list-style: none;
     display: flex;
@@ -134,18 +134,18 @@ nav a.active {
     padding: 0;
     margin-bottom: 1rem;
   }
-  
+
   .footer-links a {
     color: #93c5fd;
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
+
   .footer-links a:hover {
     color: #ffffff;
     text-decoration: underline;
   }
-  
+
   .footer-copy {
     font-size: 0.9rem;
     color: #9ca3af;
@@ -154,18 +154,18 @@ nav a.active {
     .footer-top h2 {
       font-size: 1.4rem;
     }
-    
+
     .footer-btn {
       width: 100%;
       padding: 0.75rem;
     }
-  
+
     .footer-links {
       flex-direction: column;
       gap: 0.75rem;
     }
   }
-    
+
 
 /* --- Botones --- */
 .btn {
@@ -524,12 +524,10 @@ nav a.active {
     h2 { font-size: 1.75rem; }
     h3 { font-size: 1.3rem; }
 
-    header .container { flex-direction: column; }
-    nav ul { flex-direction: column; text-align: center; margin-top: 1rem; }
-    nav ul li { margin: 0.5rem 0; }
-    nav a {
-        font-size: 1.1rem;
-    }
+    /* header .container { flex-direction: column; } YA NO ES NECESARIO CON EL MENÚ HAMBURGUESA */
+    /* nav ul { flex-direction: column; text-align: center; margin-top: 1rem; } YA NO ES NECESARIO CON EL MENÚ HAMBURGUESA */
+    /* nav ul li { margin: 0.5rem 0; } YA NO ES NECESARIO CON EL MENÚ HAMBURGUESA */
+    /* nav a { font-size: 1.1rem; } YA NO ES NECESARIO CON EL MENÚ HAMBURGUESA */
 
     .hero-content h1 { font-size: 2rem; }
     .hero-content p { font-size: 1.1rem; }
@@ -553,26 +551,66 @@ nav a.active {
         padding-bottom: 0.5rem; /* Añade espacio abajo si quieres */
     }
 
-    /* ... otras reglas móviles ... */
     /* ... (otras reglas que ya tienes aquí como header .container { flex-direction: column; } ) ... */
 
     /* AÑADE ESTAS LÍNEAS PARA AJUSTAR EL LOGO EN MÓVILES */
-    .logo img {
-        max-width: 280px;  /* O el tamaño que prefieras, ej: 180px, 220px */
-        height: auto;     /* Importante para mantener la proporción al cambiar el ancho */
-        margin: 0 auto;   /* Opcional: Centra el logo si el contenedor es más ancho */
+    /* .logo img { */ /* <- Esta regla se moverá dentro del bloque de menú hamburguesa más abajo */
+        /* max-width: 280px; */  /* O el tamaño que prefieras, ej: 180px, 220px */
+        /* height: auto; */     /* Importante para mantener la proporción al cambiar el ancho */
+        /* margin: 0 auto; */   /* Opcional: Centra el logo si el contenedor es más ancho */
+    /* } */
+
+    /* --- Ajustes Responsive para la nueva sección INFO-SERVICIOS --- */
+     #detalle-servicios h1 {
+        font-size: 2rem;
+    }
+    #detalle-servicios .introduccion-servicios {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    .servicios-detalle-grid {
+        gap: 1.5rem;
+    }
+    .servicio-detalle-card {
+        padding: 1.5rem 1rem;
+    }
+    /* .servicio-icono { */ /* <- ESTA REGLA SE MODIFICARÁ MÁS ABAJO */
+        /* height: 400px; */ /* Estas reglas originales se sobrescribían por las de 80px */
+        /* width: 400px; */
+        /* margin-bottom: 1rem; */
+    /* } */
+     .servicio-detalle-card h3 {
+        font-size: 1.2rem;
+    }
+    .servicio-detalle-card p {
+        font-size: 0.95rem;
+    }
+     .llamada-accion-servicios h2 {
+        font-size: 1.6rem;
+    }
+     .llamada-accion-servicios p {
+        font-size: 1rem;
     }
 
-    /* ... (más reglas si las tienes) ... */
 
-}
+} /* FIN DE @media (max-width: 768px) original - OJO, puede haber otro bloque más abajo */
 
 @media (max-width: 576px) {
     .container { max-width: 100%; }
-    .logo img { max-width: 180px; }
+    /* .logo img { max-width: 180px; } */ /* Esta regla se moverá al bloque del menú hamburguesa */
     .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
 
     .about-card-contenido h2, .servicio-card-contenido h2 { font-size: 1.15rem; }
+
+    /* --- Ajustes Responsive para INFO-SERVICIOS en pantallas muy pequeñas --- */
+    .servicios-detalle-grid {
+        /* En pantallas muy pequeñas, fuerza una columna */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .servicio-detalle-card h3 {
+        font-size: 1.15rem;
+    }
 }
 /* --- ESTILOS PARA PÁGINA INFO-SERVICIOS (info-servicio.html) --- */
 
@@ -626,6 +664,8 @@ nav a.active {
     width: 250px;  /* Tamaño del icono */
     height: 250px; /* Tamaño del icono */
     margin-bottom: 1.5rem;
+    /* Añadimos object-fit por si las imágenes no son cuadradas */
+    object-fit: contain;
 }
 
 .servicio-detalle-card h3 {
@@ -667,56 +707,11 @@ nav a.active {
 }
 
 
-/* --- Ajustes Responsive para la nueva sección --- */
-@media (max-width: 768px) {
-    #detalle-servicios h1 {
-        font-size: 2rem;
-    }
-    #detalle-servicios .introduccion-servicios {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-    .servicios-detalle-grid {
-        gap: 1.5rem;
-    }
-    .servicio-detalle-card {
-        padding: 1.5rem 1rem;
-    }
-    .servicio-icono {
-        height: 400px;
-        width: 400px;
-        margin-bottom: 1rem;
-    }
-     .servicio-detalle-card h3 {
-        font-size: 1.2rem;
-    }
-    .servicio-detalle-card p {
-        font-size: 0.95rem;
-    }
-     .llamada-accion-servicios h2 {
-        font-size: 1.6rem;
-    }
-     .llamada-accion-servicios p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .servicios-detalle-grid {
-        /* En pantallas muy pequeñas, fuerza una columna */
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .servicio-detalle-card h3 {
-        font-size: 1.15rem;
-    }
-}
 /* ============================================================ */
-/* AÑADIR ESTE BLOQUE AL FINAL DE TU ARCHIVO style.css ORIGINAL */
+/* BLOQUE PARA MENÚ HAMBURGUESA Y AJUSTES MÓVILES ESPECÍFICOS  */
 /* ============================================================ */
 
 /* Regla GLOBAL para ocultar botón hamburguesa en escritorio por defecto */
-/* Asegúrate de que no tengas otra regla para .mobile-menu-button fuera de media queries */
 .mobile-menu-button {
     display: none; /* Oculto en escritorio */
     background: none;
@@ -729,17 +724,13 @@ nav a.active {
 }
 
 /* --- Media Query para Móviles (768px o menos) --- */
-/* Si ya tienes un @media (max-width: 768px) en tu CSS original, */
-/* añade las siguientes reglas DENTRO de ese bloque existente. */
-/* Si NO tienes un bloque @media (max-width: 768px), añade el bloque completo: */
-
 @media (max-width: 768px) {
 
     /* --- Ajustes Header y Menú Hamburguesa --- */
 
     /* Cambia el layout del contenedor del header para fila y espacio entre logo/botón */
     header .container {
-        flex-direction: row;
+        flex-direction: row; /* Asegura que sea fila */
         align-items: center;
         /* Asegura padding si es necesario */
         padding-left: 1rem;
@@ -748,7 +739,7 @@ nav a.active {
 
     /* Ajusta el tamaño del logo SÓLO en móvil */
     .logo img {
-        max-width: 250px; /* O 200px, el tamaño que te guste para móvil */
+        max-width: 400px; /* O 200px, el tamaño que te guste para móvil */
         height: auto; /* Mantiene proporción */
         margin: 0; /* Resetea margen si lo tenía */
     }
@@ -756,7 +747,7 @@ nav a.active {
     /* Muestra el botón hamburguesa SÓLO en móvil */
     .mobile-menu-button {
         display: block; /* Mostrar el botón */
-        margin-left: auto;
+        margin-left: auto; /* Empuja el botón a la derecha */
     }
 
     /* Prepara el contenedor <nav> pero oculta la lista <ul> */
@@ -816,12 +807,21 @@ nav a.active {
 
     /* --- Otros Ajustes Específicos para Móvil --- */
 
+    /* ***** MODIFICACIÓN AQUÍ ***** */
     /* Ajuste tamaño iconos en la sección de info-servicios */
     .servicio-icono {
-         width: 80px;  /* El tamaño que decidiste para móvil */
-         height: 80px; /* El tamaño que decidiste para móvil */
-         /* No modifiques otros márgenes aquí si ya estaban bien en escritorio */
-     }
+        /* Eliminamos width y height fijos */
+        /* width: 80px; */
+        /* height: 80px; */
+        /* Usamos max-width para adaptabilidad */
+        max-width: 100%;
+        /* height: auto para mantener proporción */
+        height: auto;
+        /* Mantenemos el margen si es necesario */
+        margin-bottom: 1rem;
+    }
+    /* ***** FIN DE LA MODIFICACIÓN ***** */
+
 
     /* Ajuste layout y estilo de los enlaces del footer */
     .footer-links {
