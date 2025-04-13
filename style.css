@@ -527,6 +527,9 @@ nav a.active {
     header .container { flex-direction: column; }
     nav ul { flex-direction: column; text-align: center; margin-top: 1rem; }
     nav ul li { margin: 0.5rem 0; }
+    nav a {
+        font-size: 1.1rem;
+    }
 
     .hero-content h1 { font-size: 2rem; }
     .hero-content p { font-size: 1.1rem; }
@@ -555,7 +558,7 @@ nav a.active {
 
     /* AÑADE ESTAS LÍNEAS PARA AJUSTAR EL LOGO EN MÓVILES */
     .logo img {
-        max-width: 200px;  /* O el tamaño que prefieras, ej: 180px, 220px */
+        max-width: 280px;  /* O el tamaño que prefieras, ej: 180px, 220px */
         height: auto;     /* Importante para mantener la proporción al cambiar el ancho */
         margin: 0 auto;   /* Opcional: Centra el logo si el contenedor es más ancho */
     }
