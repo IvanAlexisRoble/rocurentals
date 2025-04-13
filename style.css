@@ -785,7 +785,7 @@ nav a.active {
         display: block;
         flex-shrink: 0; /* No se encoge */
         /* Añade un pequeño margen izquierdo para separarlo del logo si quieres */
-        margin-left: 0.5rem; /* Ajusta este valor (o elimínalo si quieres que se peguen) */
+        margin-left: 0; /* Ajusta este valor (o elimínalo si quieres que se peguen) */
         /* Mantenemos el padding del botón para que sea fácil pulsarlo */
         padding: 0.5rem;
     }
