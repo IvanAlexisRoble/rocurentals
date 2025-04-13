@@ -751,42 +751,43 @@ nav a.active {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 1rem; /* Mantenemos padding si quieres espacio en los bordes */
-        padding-right: 1rem;
-        /* Puedes añadir un 'gap' si quieres espacio entre el logo y el botón */
-        gap: 1rem; /* Ajusta el valor del espacio si lo usas */
+        /* Cambia los paddings a 0 */
+        padding-left: 0;   /* <--- CAMBIO AQUÍ */
+        padding-right: 0;  /* <--- CAMBIO AQUÍ */
+        /* Quita o pon a 0 el gap si lo tenías */
+        gap: 0;            /* <--- CAMBIO AQUÍ */
+        /* Asegura que el contenedor use todo el ancho disponible */
+        width: 100%;
     }
 
-    /* Haz que el DIV contenedor del logo crezca */
+    /* El div del logo sigue creciendo */
     .logo {
-        flex-grow: 1;  /* <--- ESTA ES LA PROPIEDAD CLAVE */
-        /* Quita márgenes automáticos si los hubiera */
+        flex-grow: 1;
         margin: 0;
-         /* Añadido: Evita que el div del logo se encoja demasiado */
-         flex-shrink: 1; /* (Valor por defecto, pero lo ponemos por claridad) */
-         /* Añadido: Ayuda si la imagen es ligeramente más grande que el contenedor */
-         overflow: hidden;
+        flex-shrink: 1; /* Permitir que encoja si es necesario */
+        overflow: hidden; /* Evita desbordamientos */
+         /* Opcional: centrar verticalmente la imagen si el div tiene altura */
+         display: flex;
+         align-items: center;
     }
 
-    /* Ajusta la imagen del logo móvil para que ocupe su contenedor */
+    /* La imagen del logo móvil ocupa su contenedor */
     .logo-mobile {
-        display: block; /* Cambiamos a block para que width: 100% funcione bien */
-        width: 100%;   /* Que la imagen ocupe TODO el ancho de su div padre (.logo) */
-        max-width: none; /* Quitamos cualquier limitación previa de max-width si existía */
-        height: auto;   /* Mantenemos la proporción */
-        vertical-align: middle; /* Opcional, para alinear si fuera necesario */
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        /* Ya no necesita vertical-align si el padre .logo usa flex */
     }
 
-    /* Ajusta el botón hamburguesa */
+    /* El botón hamburguesa */
     .mobile-menu-button {
         display: block;
-        /* Quita el margen automático a la izquierda, ya no es necesario */
-        /* margin-left: auto; */
-        /* Evita que el botón se encoja si no hay espacio */
-        flex-shrink: 0; /* <--- IMPORTANTE */
-        /* El 'gap' en 'header .container' se encargará del espaciado, */
-        /* o puedes añadir un 'margin-left' pequeño si no usas gap */
-        /* margin-left: 1rem; */
+        flex-shrink: 0; /* No se encoge */
+        /* Añade un pequeño margen izquierdo para separarlo del logo si quieres */
+        margin-left: 0.5rem; /* Ajusta este valor (o elimínalo si quieres que se peguen) */
+        /* Mantenemos el padding del botón para que sea fácil pulsarlo */
+        padding: 0.5rem;
     }
 
     /* Oculta el logo de escritorio (esta regla debería estar ya) */
@@ -796,7 +797,7 @@ nav a.active {
 
     /* ... resto de tus reglas móviles ... */
 
- } /* --- FIN de @media (max-width: 768px) --- */
+ /* --- FIN de @media (max-width: 768px) --- */
 
     /* Prepara el contenedor <nav> pero oculta la lista <ul> */
     nav {
@@ -852,6 +853,7 @@ nav a.active {
         font-weight: bold;
         background-color: rgba(0, 0, 60, 0.1);
     }
+}
 
     /* --- Otros Ajustes Específicos para Móvil --- */
 
