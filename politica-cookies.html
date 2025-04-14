@@ -9,12 +9,18 @@
 </head>
 <body>
   <header>
-    <div class="container"> <div class="logo">
-            <img src="img/logo-rocu-rentals.png" alt="Logo ROCU RENTALS">
-        </div>
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo-rocu-rentals.png" alt="Logo ROCU RENTALS" class="logo-desktop">
+        <img src="img/logo-mobile.png" alt="Logo ROCU RENTALS" class="logo-mobile">
+    </div>
+
+        <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false">
+            ☰
+        </button>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="propiedades.html">Propiedades</a></li>
                 <li><a href="info-servicios.html">Servicios</a></li>
                 <li><a href="servicios.html">Tarifas</a></li>
@@ -76,5 +82,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

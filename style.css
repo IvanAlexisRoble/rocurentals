@@ -11,8 +11,8 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 22px;
-    line-height: 1;
+    font-size: 22px; /* ORIGINAL */
+    line-height: 1;  /* ORIGINAL */
     color: #333;
     background-color: #f8f9fa;
 }
@@ -29,15 +29,15 @@ body {
 
 /* --- Tipografía --- */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 900;
+    font-weight: 900; /* ORIGINAL */
     line-height: 1.3;
     margin-bottom: 0.75rem;
     color: #212529;
 }
 
-h1 { font-size: 2.5rem; /* AJUSTA */ }
-h2 { font-size: 2rem;   /* AJUSTA */ }
-h3 { font-size: 1.5rem;   /* AJUSTA */ }
+h1 { font-size: 2.5rem; /* ORIGINAL */ }
+h2 { font-size: 2rem;   /* ORIGINAL */ }
+h3 { font-size: 1.5rem;   /* ORIGINAL */ }
 p { margin-bottom: 1rem; }
 a { color: #007bff; text-decoration: none; transition: color 0.2s ease; }
 a:hover { color: #0056b3; }
@@ -50,63 +50,75 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    max-height: 50px;
+    max-height: 50px; /* ORIGINAL */
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 0px;
-    padding-left: 0%;
-    margin-right: 0px;
-    padding-right: 0%;
+    margin-left: 0px;   /* ORIGINAL */
+    padding-left: 0%;  /* ORIGINAL */
+    margin-right: 0px;  /* ORIGINAL */
+    padding-right: 0%; /* ORIGINAL */
+    /* width: 100%; (Implícito por defecto o heredado) */
 }
 
-.logo img {
-    max-width: 800px;
-    height: 50px;
-}
+/* --- LOGO STYLES --- */
+.logo {
+    line-height: 0;
+  }
+
+.logo-desktop {
+      display: inline-block;
+      max-width: 800px;
+      height: 50px;
+      vertical-align: middle;
+  }
+
+.logo-mobile {
+      display: none;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+  }
 
 nav ul { list-style: none; display: flex; }
 nav ul li { margin-left: 2rem; }
-nav a { font-weight: 500; color: #00003c; }
+nav a { font-weight: 500; color: #00003c; } /* ORIGINAL */
 nav a:hover { color: #ffd700; }
 nav a.active {
-    color: #ffd700; /* Cambia el color del texto */
-    font-weight: bold; /* Resalta la sección activa */
-    border-bottom: 2px solid #ffd700; /* Línea debajo del enlace activo */
+    color: #ffd700;
+    font-weight: bold;
+    border-bottom: 2px solid #ffd700;
   }
+
 /* --- Footer --- */
 .footer {
-    background-color: #1f2937; /* Gris oscuro */
+    background-color: #1f2937;
     color: #ffffff;
     padding: 3rem 1rem;
     font-family: 'Segoe UI', sans-serif;
   }
-  
-  .footer-container {
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
   }
-  
-  .footer-top h2 {
+.footer-top h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #facc15; /* Amarillo dorado */
+    color: #facc15;
   }
-  
-  .footer-top p {
+.footer-top p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: #d1d5db;
   }
-  
-  .footer-btn {
+.footer-btn {
     display: inline-block;
     margin-top: 1rem;
-    background-color: #2563eb; /* Azul fuerte */
+    background-color: #2563eb;
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -114,18 +126,15 @@ nav a.active {
     text-decoration: none;
     transition: background-color 0.3s ease;
   }
-  
-  .footer-btn:hover {
-    background-color: #ffd700;
+.footer-btn:hover {
+    background-color: #ffd700; /* ORIGINAL */
   }
-  
-  .footer-bottom {
+.footer-bottom {
     margin-top: 3rem;
     border-top: 1px solid #374151;
     padding-top: 1.5rem;
   }
-  
-  .footer-links {
+.footer-links {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -134,38 +143,19 @@ nav a.active {
     padding: 0;
     margin-bottom: 1rem;
   }
-  
-  .footer-links a {
+.footer-links a {
     color: #93c5fd;
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
-  .footer-links a:hover {
+.footer-links a:hover {
     color: #ffffff;
     text-decoration: underline;
   }
-  
-  .footer-copy {
+.footer-copy {
     font-size: 0.9rem;
     color: #9ca3af;
   }
-  @media (max-width: 640px) {
-    .footer-top h2 {
-      font-size: 1.4rem;
-    }
-    
-    .footer-btn {
-      width: 100%;
-      padding: 0.75rem;
-    }
-  
-    .footer-links {
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-  }
-    
 
 /* --- Botones --- */
 .btn {
@@ -177,9 +167,8 @@ nav a.active {
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     border: 1px solid transparent;
-    font-size: 1rem; /* AJUSTA */
+    font-size: 1rem; /* ORIGINAL */
 }
-
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
@@ -190,7 +179,6 @@ nav a.active {
     border-color: #0056b3;
     color: #fff;
 }
-
 .btn-secondary {
     background-color: #6c757d;
     border-color: #6c757d;
@@ -207,7 +195,7 @@ nav a.active {
     position: relative;
     text-align: center;
     color: white;
-    min-height: 60vh;
+    min-height: 60vh; /* ORIGINAL */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,13 +214,13 @@ nav a.active {
     position: static;
     transform: none;
     background-color: #6cace49a;
-    padding: 20px;
-    border-radius: 0;
+    padding: 20px; /* ORIGINAL */
+    border-radius: 0; /* ORIGINAL */
     width: 90%;
-    max-width: 1024px;
+    max-width: 1024px; /* ORIGINAL */
 }
-.hero-content h1 { font-size: 3.8rem; /* AJUSTA */ margin-bottom: 1rem; color: #fff; }
-.hero-content p { font-size: 1.5rem; font-weight: bold;/* AJUSTA */ line-height: 1.8; color: #ffd700; margin-bottom: 2rem; }
+.hero-content h1 { font-size: 3.8rem; margin-bottom: 1rem; color: #fff; } /* ORIGINAL */
+.hero-content p { font-size: 1.5rem; font-weight: bold; line-height: 1.8; color: #ffd700; margin-bottom: 2rem; } /* ORIGINAL */
 
 /* --- Servicios Destacados (index.html) --- */
 #servicios-destacados {
@@ -241,7 +229,7 @@ nav a.active {
 }
 #servicios-destacados h2 { margin-bottom: 3rem; }
 .servicios-container {
-    display: flex;
+    display: flex; /* ORIGINAL */
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
@@ -257,15 +245,15 @@ nav a.active {
     text-align: center;
 }
 .servicio img {
-    width: 300px;
-    height: 300px;
+    width: 300px; /* ORIGINAL */
+    height: 300px; /* ORIGINAL */
     object-fit: contain;
-    display: flex;
+    display: flex; /* ORIGINAL */
     margin: 0 auto 1.5rem auto;
     max-width: 100%;
 }
-.servicio h3 { font-size: 1.4rem; /* AJUSTA */ margin-bottom: 0.75rem; }
-.servicio p { font-size: 1rem; /* AJUSTA */ line-height: 1.8; }
+.servicio h3 { font-size: 1.4rem; margin-bottom: 0.75rem; } /* ORIGINAL */
+.servicio p { font-size: 1rem; line-height: 1.8; } /* ORIGINAL */
 
 /* --- Llamada a la Acción (index.html) --- */
 #llamada-a-la-accion {
@@ -274,21 +262,19 @@ nav a.active {
     background-color: #e9ecef;
     margin: 3rem 0;
 }
-#llamada-a-la-accion h2 { font-size: 2rem; /* AJUSTA */ margin-bottom: 1rem; }
+#llamada-a-la-accion h2 { font-size: 2rem; margin-bottom: 1rem; } /* ORIGINAL */
 #llamada-a-la-accion p { font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.8; }
 
 /* --- Página de Propiedades (propiedades.html) --- */
 #listado-propiedades { padding: 3rem 0; }
-#listado-propiedades h1 { text-align: center; margin-bottom: 2rem; font-size: 2.2rem; /* AJUSTA */ }
+#listado-propiedades h1 { text-align: center; margin-bottom: 2rem; font-size: 2.2rem; } /* ORIGINAL */
 .filtros { text-align: center; margin-bottom: 3rem; }
-.filtros select { padding: 0.5rem 1rem; margin: 0 0.5rem; border: 1px solid #ced4da; border-radius: 4px; font-size: 1rem; /* AJUSTA */ background-color: #fff; }
-
+.filtros select { padding: 0.5rem 1rem; margin: 0 0.5rem; border: 1px solid #ced4da; border-radius: 4px; font-size: 1rem; background-color: #fff; } /* ORIGINAL */
 .propiedades-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
-
 .propiedad {
     background-color: #fff;
     border-radius: 8px;
@@ -299,23 +285,20 @@ nav a.active {
     padding: 0;
     margin-bottom: 0;
 }
-
 .propiedad img {
     width: 100%;
-    height: 200px;
+    height: 200px; /* ORIGINAL */
     object-fit: cover;
     display: block;
     border-radius: 0;
     margin: 0;
 }
-
 .propiedad-contenido {
     padding: 1.5rem;
-    text-align: center;
+    text-align: center; /* ORIGINAL */
 }
-
-.propiedad h3 { font-size: 1.25rem; /* AJUSTA */ margin-bottom: 0.5rem; color: #0056b3; }
-.propiedad p { font-size: 0.95rem; /* AJUSTA */ margin-bottom: 0.8rem; color: #495057;line-height: 1.5; }
+.propiedad h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #0056b3; } /* ORIGINAL */
+.propiedad p { font-size: 0.95rem; margin-bottom: 0.8rem; color: #495057;line-height: 1.5; } /* ORIGINAL */
 .propiedad .precio {
     font-weight: 600;
     color: #333;
@@ -323,21 +306,26 @@ nav a.active {
 }
 /* --- Ajuste de Ancho para Página de Propiedades --- */
 #listado-propiedades .container {
-    max-width: 1440px; /*<< Ejemplo: Aumentado a 1440px. ¡Puedes ajustar este valor! */
+    max-width: 1440px; /* ORIGINAL */
 }
 
-/* --- Página de Servicios (servicios.html) --- */
+/* --- Página de Servicios (servicios.html - Tarifas) --- */
 #nuestros-servicios { padding: 3rem 0; }
 #nuestros-servicios h1 { text-align: center; margin-bottom: 2rem; font-size: 2.2rem; }
-.container p {text-align: center; margin-bottom: 3rem; font-size: 1.1rem;line-height:2;}
-
+/*#nuestros-servicios .container p {text-align: center; margin-bottom: 3rem; font-size: 1.1rem;line-height:2;}*/ /* ORIGINAL COMENTADO */
+/* Estilo más específico para el párrafo introductorio */
+#nuestros-servicios > .container > p:first-of-type {
+     text-align: center;
+     margin-bottom: 3rem;
+     font-size: 1.1rem;
+     line-height: 2; /* ORIGINAL */
+}
 .servicios-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* ORIGINAL */
     gap: 1.5rem;
     margin-top: 2rem;
 }
-
 .servicio-card {
     background-color: #fff;
     border-radius: 8px;
@@ -345,7 +333,6 @@ nav a.active {
     display: flex;
     flex-direction: column;
 }
-
 .servicio-card-contenido {
     padding: 1.5rem;
     text-align: center;
@@ -353,47 +340,41 @@ nav a.active {
     display: flex;
     flex-direction: column;
 }
-
 .servicio-card-contenido h2 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* ORIGINAL */
     margin-bottom: 0.75rem;
     color: #0056b3;
 }
-
 .servicio-card-contenido p {
-    font-size: 1rem;
+    font-size: 1rem; /* ORIGINAL */
     margin-bottom: 1rem;
     color: #495057;
     flex-grow: 1;
 }
-
 .servicio-card-contenido ul {
-    list-style: disc;
+    list-style: disc; /* ORIGINAL */
     margin: 0 auto 1rem auto;
-    padding-left: 0;
+    padding-left: 0; /* ORIGINAL */
     text-align: left;
     display: inline-block;
     max-width: 100%;
 }
-
 .servicio-card-contenido li {
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* ORIGINAL */
     color: #495057;
 }
-
 .precio-servicio {
     font-weight: bold;
     color: #333;
     margin-top: auto;
     padding-top: 1rem;
-    font-size: 1rem;
+    font-size: 1rem; /* ORIGINAL */
 }
 
 /* --- Formulario de Contacto (contacto.html) --- */
 #contacto { padding: 3rem 0; }
 #contacto h1 { text-align: center; }
-/* Estilo más específico para el párrafo introductorio de contacto */
 #contacto > .container > p:first-of-type {
     text-align: center;
     max-width: 600px;
@@ -401,17 +382,14 @@ nav a.active {
     margin-right: auto;
     margin-bottom: 2rem;
 }
-
 .formulario-contacto { width: 100%; max-width: 700px; margin: 0 auto; background-color: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); }
 .formulario-contacto form { display: flex; flex-direction: column; }
 .formulario-contacto .form-row { display: flex; gap: 1rem; }
-.formulario-contacto .form-group { margin-bottom: 1rem; width: 100%; }
-.formulario-contacto label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; /* AJUSTA */ color: #495057; }
-
-/* *** MODIFICACIÓN AQUÍ: Añadido input[type="tel"] *** */
+.formulario-contacto .form-group { margin-bottom: 1rem; width: 100%; /* ORIGINAL */ }
+.formulario-contacto label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; color: #495057; } /* ORIGINAL */
 .formulario-contacto input[type="text"],
 .formulario-contacto input[type="email"],
-.formulario-contacto input[type="tel"], /* Añadido para el campo teléfono */
+.formulario-contacto input[type="tel"],
 .formulario-contacto textarea {
     width: 100%;
     padding: 0.75rem 1rem;
@@ -419,25 +397,37 @@ nav a.active {
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
-    font-size: 1rem; /* AJUSTA */
+    font-size: 1rem; /* ORIGINAL */
     font-family: inherit;
 }
-
-/* *** FIN DE LA MODIFICACIÓN *** */
-
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus { border-color: #80bdff; outline: 0; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
 .formulario-contacto button[type="submit"] { margin-top: 1rem; align-self: flex-start; }
 
+/* Mensaje de estado del formulario */
+#form-status {
+    margin-top: 1rem;
+    font-weight: bold;
+    /* Estilos base para visibilidad controlada por JS */
+    padding: 0.75rem;
+    border-radius: 4px;
+    display: none; /* Oculto por defecto */
+    text-align: center;
+    border: 1px solid transparent;
+}
+/* Clases para JS */
+#form-status.success { background-color: #d4edda; color: #155724; border-color: #c3e6cb; display: block; }
+#form-status.error { background-color: #f8d7da; color: #721c24; border-color: #f5c6cb; display: block; }
+
+
 .info-contacto { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e9ecef; }
-.info-contacto h2 { font-size: 1.5rem; /* AJUSTA */ margin-bottom: 1rem; }
-.info-contacto p { font-size: 1rem; /* AJUSTA */ margin-bottom: 0.5rem; color: #495057; }
+.info-contacto h2 { font-size: 1.5rem; margin-bottom: 1rem; } /* ORIGINAL */
+.info-contacto p { font-size: 1rem; margin-bottom: 0.5rem; color: #495057; } /* ORIGINAL */
 
 
 /* --- ESTILOS PARA PÁGINA SOBRE NOSOTROS --- */
 #sobre-nosotros { padding: 3rem 0; }
 #sobre-nosotros h1 { text-align: center; margin-bottom: 1rem; font-size: 2.2rem; }
-
 #sobre-nosotros .introduccion {
     text-align: center;
     max-width: 800px;
@@ -448,13 +438,11 @@ nav a.active {
     color: #495057;
     line-height: 1.8;
 }
-
 .about-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* ORIGINAL */
     gap: 1.5rem;
 }
-
 .about-card {
     background-color: #fff;
     border-radius: 8px;
@@ -462,7 +450,6 @@ nav a.active {
     display: flex;
     flex-direction: column;
 }
-
 .about-card-contenido {
     padding: 1.5rem;
     text-align: center;
@@ -470,15 +457,13 @@ nav a.active {
     display: flex;
     flex-direction: column;
 }
-
 .about-card-contenido h2 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* ORIGINAL */
     margin-bottom: 0.75rem;
     color: #0056b3;
 }
-
 .about-card-contenido p {
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* ORIGINAL */
     margin-bottom: 1rem;
     color: #495057;
     flex-grow: 1;
@@ -486,125 +471,59 @@ nav a.active {
 .about-card-contenido p:last-of-type {
     flex-grow: 0;
 }
-
-
 .about-card-contenido ul {
-    list-style: none;
+    list-style: none; /* ORIGINAL */
     padding-left: 0;
     margin: 0 auto 1rem auto;
     text-align: left;
     display: inline-block;
     max-width: 100%;
     color: #495057;
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* ORIGINAL */
 }
-
 .about-card-contenido li {
     margin-bottom: 0.6rem;
-    padding-left: 1.2em;
+    padding-left: 1.2em; /* ORIGINAL */
     position: relative;
 }
-
 .about-card-contenido li strong {
     color: #333;
-    font-weight: 600;
+    font-weight: 600; /* ORIGINAL */
 }
 
-/* --- Media Queries (Responsive) --- */
+/* --- Media Queries (Responsive - Tablet) --- */
 @media (max-width: 992px) {
     .container { max-width: 960px; }
     .servicio { flex-basis: calc(50% - 1rem); max-width: calc(50% - 1rem); }
-    .servicios-grid-container { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-    .about-grid-container { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .servicios-grid-container { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } /* ORIGINAL */
+    .about-grid-container { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } /* ORIGINAL */
 }
 
-@media (max-width: 768px) {
-    .container { max-width: 720px; }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.75rem; }
-    h3 { font-size: 1.3rem; }
-
-    header .container { flex-direction: column; }
-    nav ul { flex-direction: column; text-align: center; margin-top: 1rem; }
-    nav ul li { margin: 0.5rem 0; }
-    nav a {
-        font-size: 1.1rem;
-    }
-
-    .hero-content h1 { font-size: 2rem; }
-    .hero-content p { font-size: 1.1rem; }
-
-    .servicios-container { flex-direction: column; gap: 1.5rem; }
-    .servicio { flex-basis: 100%; max-width: 450px; margin: 0 auto; }
-
-    .propiedades-container { gap: 1rem; }
-    .servicios-grid-container { grid-template-columns: 1fr; gap: 1rem; }
-    .about-grid-container { grid-template-columns: 1fr; gap: 1rem; }
-
-    .formulario-contacto .form-row { flex-direction: column; gap: 0; }
-    .formulario-contacto .form-group { margin-bottom: 1rem; }
-    .formulario-contacto { padding: 1.5rem; }
-    /* ... otras reglas móviles ... */
-
-    header {
-        max-height: none; /* Permite que el header crezca en móviles */
-        height: auto; /* Asegura altura automática */
-        padding-top: 0.5rem; /* Añade espacio arriba si quieres */
-        padding-bottom: 0.5rem; /* Añade espacio abajo si quieres */
-    }
-
-    /* ... otras reglas móviles ... */
-    /* ... (otras reglas que ya tienes aquí como header .container { flex-direction: column; } ) ... */
-
-    /* AÑADE ESTAS LÍNEAS PARA AJUSTAR EL LOGO EN MÓVILES */
-    .logo img {
-        max-width: 280px;  /* O el tamaño que prefieras, ej: 180px, 220px */
-        height: auto;     /* Importante para mantener la proporción al cambiar el ancho */
-        margin: 0 auto;   /* Opcional: Centra el logo si el contenedor es más ancho */
-    }
-
-    /* ... (más reglas si las tienes) ... */
-
-}
-
-@media (max-width: 576px) {
-    .container { max-width: 100%; }
-    .logo img { max-width: 180px; }
-    .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
-
-    .about-card-contenido h2, .servicio-card-contenido h2 { font-size: 1.15rem; }
-}
 /* --- ESTILOS PARA PÁGINA INFO-SERVICIOS (info-servicio.html) --- */
-
 #detalle-servicios {
     padding: 3rem 0;
 }
-
 #detalle-servicios h1 {
     text-align: center;
     margin-bottom: 1rem;
-    font-size: 2.2rem; /* Ajusta si es necesario */
+    font-size: 2.2rem;
 }
-
 #detalle-servicios .introduccion-servicios {
     text-align: center;
-    max-width: 800px; /* Limita el ancho del texto introductorio */
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
-    font-size: 1.1rem; /* Ajusta si es necesario */
+    font-size: 1.1rem;
     color: #495057;
     line-height: 1.8;
 }
-
 .servicios-detalle-grid {
     display: grid;
-    /* Crea columnas automáticas que tengan un mínimo de 280px y máximo 1fr */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem; /* Espacio entre tarjetas */
-    margin-bottom: 4rem; /* Espacio antes de la llamada a la acción */
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
-
 .servicio-detalle-card {
     background-color: #fff;
     border-radius: 8px;
@@ -616,48 +535,42 @@ nav a.active {
     align-items: center;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
 .servicio-detalle-card:hover {
-    transform: translateY(-5px); /* Efecto sutil al pasar el ratón */
+    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
-
 .servicio-icono {
-    width: 250px;  /* Tamaño del icono */
-    height: 250px; /* Tamaño del icono */
+    width: 250px;  /* ORIGINAL */
+    height: 250px; /* ORIGINAL */
     margin-bottom: 1.5rem;
+    object-fit: contain; /* ORIGINAL */
 }
-
 .servicio-detalle-card h3 {
-    font-size: 1.3rem; /* Ajusta si es necesario */
-    color: #0056b3; /* Un azul un poco más oscuro */
+    font-size: 1.3rem; /* ORIGINAL */
+    color: #0056b3;
     margin-bottom: 0.75rem;
 }
-
 .servicio-detalle-card p {
-    font-size: 1rem;  /* Ajusta si es necesario */
+    font-size: 1rem;  /* ORIGINAL */
     color: #495057;
-    line-height: 1.7;
-    flex-grow: 1; /* Hace que el párrafo ocupe el espacio disponible */
+    line-height: 1.7; /* ORIGINAL */
+    flex-grow: 1;
 }
-
 /* Llamada a la acción específica para la página de servicios */
 .llamada-accion-servicios {
     text-align: center;
     padding: 2.5rem 1rem;
-    background-color: #e9ecef; /* Fondo suave */
+    background-color: #e9ecef;
     border-radius: 8px;
-    margin-top: 3rem; /* Espacio arriba */
+    margin-top: 3rem;
 }
-
 .llamada-accion-servicios h2 {
-    font-size: 1.8rem; /* Ajusta si es necesario */
+    font-size: 1.8rem; /* ORIGINAL */
     margin-bottom: 1rem;
     color: #343a40;
 }
-
 .llamada-accion-servicios p {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* ORIGINAL */
     margin-bottom: 1.5rem;
     line-height: 1.8;
     max-width: 700px;
@@ -667,182 +580,211 @@ nav a.active {
 }
 
 
-/* --- Ajustes Responsive para la nueva sección --- */
-@media (max-width: 768px) {
-    #detalle-servicios h1 {
-        font-size: 2rem;
-    }
-    #detalle-servicios .introduccion-servicios {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-    .servicios-detalle-grid {
-        gap: 1.5rem;
-    }
-    .servicio-detalle-card {
-        padding: 1.5rem 1rem;
-    }
-    .servicio-icono {
-        height: 200px;
-        width: 200px;
-        margin-bottom: 1rem;
-    }
-     .servicio-detalle-card h3 {
-        font-size: 1.2rem;
-    }
-    .servicio-detalle-card p {
-        font-size: 0.95rem;
-    }
-     .llamada-accion-servicios h2 {
-        font-size: 1.6rem;
-    }
-     .llamada-accion-servicios p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .servicios-detalle-grid {
-        /* En pantallas muy pequeñas, fuerza una columna */
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    .servicio-detalle-card h3 {
-        font-size: 1.15rem;
-    }
-}
 /* ============================================================ */
-/* AÑADIR ESTE BLOQUE AL FINAL DE TU ARCHIVO style.css ORIGINAL */
+/* BLOQUE PARA MENÚ HAMBURGUESA Y AJUSTES MÓVILES ESPECÍFICOS  */
 /* ============================================================ */
 
 /* Regla GLOBAL para ocultar botón hamburguesa en escritorio por defecto */
-/* Asegúrate de que no tengas otra regla para .mobile-menu-button fuera de media queries */
 .mobile-menu-button {
     display: none; /* Oculto en escritorio */
     background: none;
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
-    color: #00003c; /* Color del icono - ajústalo si tu fondo cambia */
+    color: #00003c;
     padding: 0.5rem;
-    line-height: 1; /* Evita altura extra */
+    line-height: 1;
 }
 
 /* --- Media Query para Móviles (768px o menos) --- */
-/* Si ya tienes un @media (max-width: 768px) en tu CSS original, */
-/* añade las siguientes reglas DENTRO de ese bloque existente. */
-/* Si NO tienes un bloque @media (max-width: 768px), añade el bloque completo: */
-
+/* ============================================ */
+/* ========= INICIO BLOQUE MODIFICADO ========= */
+/* ============================================ */
 @media (max-width: 768px) {
 
+    .container { max-width: 720px; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.3rem; }
+
     /* --- Ajustes Header y Menú Hamburguesa --- */
-
-    /* Cambia el layout del contenedor del header para fila y espacio entre logo/botón */
+    header {
+        max-height: none; /* Permitir que el header crezca */
+        height: auto; /* Altura automática */
+        min-height: 55px; /* Altura mínima para touch */
+        padding: 0rem; /* Padding lateral en el header */
+    }
     header .container {
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex; /* Asegurar flex */
+        align-items: center; /* Centrar verticalmente */
+        justify-content: space-between; /* <<-- Alinear logo izq, botón der */
+        width: 100%; /* Ocupar ancho */
+        padding-left: 0rem;  /* Padding interno */
+        padding-right: 0rem;
+        gap: 0rem; /* Espacio entre logo y botón */
+        /* Quitar márgenes/paddings específicos del original si los hubiera */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .logo {
+        flex-grow: 0; /* No dejar que crezca */
+        flex-shrink: 1; /* Permitir encoger */
+        max-width: calc(100% - 50px); /* Límite de ancho (ajustar 50px según tamaño botón) */
+        overflow: hidden; /* Evitar desborde */
+        display: flex;
         align-items: center;
-        /* Asegura padding si es necesario */
-        padding-left: 1rem;
-        padding-right: 1rem;
+        line-height: 0; /* Mantener */
+    }
+    .logo-desktop { display: none; } /* Ocultar logo desktop */
+    .logo-mobile {
+        display: block; /* Mostrar logo móvil */
+        width: auto; /* Ancho según contenido */
+        max-width: 100%; /* No exceder .logo */
+        height: auto; /* Altura proporcional */
+        max-height: 45px; /* Altura máxima del logo */
     }
 
-    /* Ajusta el tamaño del logo SÓLO en móvil */
-    .logo img {
-        max-width: 180px; /* O 200px, el tamaño que te guste para móvil */
-        height: auto; /* Mantiene proporción */
-        margin: 0; /* Resetea margen si lo tenía */
-    }
-
-    /* Muestra el botón hamburguesa SÓLO en móvil */
     .mobile-menu-button {
-        display: block; /* Mostrar el botón */
+        display: block; /* Mostrar botón */
+        flex-shrink: 0; /* No encoger */
+        /* Estilos base heredados, ajustar padding si es necesario */
+        padding: 0.4rem;
+        margin-left: 0; /* Quitar margen izquierdo explícito */
     }
 
-    /* Prepara el contenedor <nav> pero oculta la lista <ul> */
+    /* --- Menú Desplegable --- */
     nav {
-        order: 3; /* Asegura que visualmente vaya después del botón */
-        width: 100%; /* Necesario para posicionar la lista ul debajo */
-        position: static; /* O relative si necesitas para la lista */
-    }
-
-    nav ul {
-        display: none; /* OCULTA el menú por defecto en móvil */
-        flex-direction: column; /* Apilar verticalmente cuando sea visible */
-        position: absolute; /* Sacar del flujo normal para superponer */
-        top: 50px; /* Distancia desde arriba = altura del header. ¡AJUSTA SI TU HEADER MIDE DIFERENTE! */
+        order: 3; /* Colocar después del botón */
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Justo debajo del header relativo */
         left: 0;
+        background-color: #6cace4;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        border-top: 1px solid rgba(255, 215, 0, 0.3);
+    }
+    nav ul {
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
         width: 100%;
-        background-color: #6cace4; /* Color de fondo del menú desplegado */
-        padding: 0; /* Resetear padding */
-        margin: 0; /* Resetear margen */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-        z-index: 999; /* Poner por encima de otro contenido */
-        border-top: 1px solid #ffd700; /* Borde superior opcional */
-    }
-
-    /* Estilo para cuando el menú es visible (se añade/quita con JS) */
-    nav ul.menu-visible {
-        display: flex; /* O display: block; - flex es útil si quieres alinear items */
-    }
-
-    /* Estilos de los elementos de la lista y enlaces en el menú desplegable */
-    nav ul li {
+        padding: 0;
         margin: 0;
-        width: 100%;
-        text-align: center;
+        /* position: static; (No necesario aquí) */
     }
+    nav ul.menu-visible { display: flex; } /* Mostrar con clase JS */
 
+    nav ul li { margin: 0; width: 100%; text-align: center; }
     nav ul li a {
-        display: block; /* Ocupar todo el ancho */
-        padding: 1rem; /* Espacio para tocar */
-        color: #00003c; /* Color de texto */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separador */
+        display: block;
+        padding: 1rem;
+        color: #00003c;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         font-weight: 600;
-        font-size: 1.1rem; /* Tamaño de fuente */
-        text-decoration: none; /* Asegurar que no hay subrayado */
+        font-size: 1.1rem;
+        text-decoration: none;
     }
-    nav ul li:last-child a {
-        border-bottom: none; /* Quitar borde al último */
-    }
-    nav ul li a:hover { /* Efecto hover (útil si se ve en tablet no táctil) */
-        background-color: rgba(255, 215, 0, 0.1);
-    }
-    nav ul li a.active { /* Estilo del enlace activo en móvil */
+    nav ul li:last-child a { border-bottom: none; }
+    nav ul li a:hover { background-color: rgba(255, 215, 0, 0.1); }
+    nav ul li a.active {
         color: #ffd700;
         font-weight: bold;
         background-color: rgba(0, 0, 60, 0.1);
     }
 
-    /* --- Otros Ajustes Específicos para Móvil --- */
+    /* --- Otros Ajustes Móviles (heredados del original CSS) --- */
+    .hero-content { padding: 1.5rem; margin-top: 55px; /* Ajustar por altura header */ }
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content p { font-size: 1.1rem; }
 
-    /* Ajuste tamaño iconos en la sección de info-servicios */
+    .servicios-container { flex-direction: column; gap: 1.5rem; } /* Original */
+    .servicio { flex-basis: 100%; max-width: 450px; margin: 0 auto; } /* Original */
+
+    .propiedades-container { gap: 1rem; grid-template-columns: 1fr; } /* Original */
+    .servicios-grid-container { grid-template-columns: 1fr; gap: 1rem; } /* Original */
+    .about-grid-container { grid-template-columns: 1fr; gap: 1rem; } /* Original */
+
+    .formulario-contacto { padding: 1.5rem; } /* Original */
+    .formulario-contacto .form-row { flex-direction: column; gap: 0; margin-bottom: 0; } /* Original */
+    .formulario-contacto .form-group { margin-bottom: 1rem; } /* Original */
+
+    #detalle-servicios h1,
+    #listado-propiedades h1,
+    #nuestros-servicios h1,
+    #sobre-nosotros h1,
+    #contacto h1 {
+        font-size: 2rem; /* Ajuste tamaños título */
+    }
+    #detalle-servicios .introduccion-servicios,
+    #sobre-nosotros .introduccion,
+    #contacto > .container > p:first-of-type,
+    #nuestros-servicios > .container > p:first-of-type {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Ajuste tamaño iconos en info-servicios */
     .servicio-icono {
-         width: 80px;  /* El tamaño que decidiste para móvil */
-         height: 80px; /* El tamaño que decidiste para móvil */
-         /* No modifiques otros márgenes aquí si ya estaban bien en escritorio */
-     }
-
-    /* Ajuste layout y estilo de los enlaces del footer */
-    .footer-links {
-        flex-direction: column; /* Apilar verticalmente */
-        align-items: center;   /* Centrar horizontalmente */
-        gap: 1rem;             /* Espacio vertical */
-        /* margin-bottom ya debería estar en la regla original */
+        max-width: 100%; /* Adaptable */
+        height: auto;    /* Proporcional */
+        max-height: 150px; /* Límite altura */
+        margin-bottom: 1rem;
     }
-    .footer-links a {
-        font-size: 1rem;      /* Tamaño de fuente móvil */
-        padding: 0.25rem 0;   /* Pequeño padding vertical */
-        color: #93c5fd;     /* Reafirmar color si fuera necesario */
+    /* Footer links */
+     .footer-links {
+        flex-direction: column; /* Original */
+        gap: 0.75rem; /* Original */
+    }
+    /* Reglas de footer para 640px estaban después, se respetan */
+    @media (max-width: 640px) {
+      .footer-top h2 {
+        font-size: 1.4rem;
+      }
+      .footer-btn {
+        width: 100%;
+        padding: 0.75rem;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 0.75rem; /* Mantenido del original */
+      }
     }
 
-    /* AÑADE AQUÍ CUALQUIER OTRA REGLA CSS */
-    /* QUE NECESITES *SOLO* PARA LA VISTA MÓVIL */
-    /* Y QUE NO AFECTE A LA VISTA DE ESCRITORIO */
+} /* ========= FIN BLOQUE MODIFICADO (@media max-width: 768px) ========= */
+/* ============================================ */
 
 
-} /* --- FIN de @media (max-width: 768px) --- */
+/* --- Media Query para Móviles Muy Pequeños (576px o menos) --- */
+/* ============================================ */
+/* ========= INICIO BLOQUE MODIFICADO ========= */
+/* ============================================ */
+@media (max-width: 576px) {
+    .container { max-width: 100%; padding-left: 0.75rem; padding-right: 0.75rem; } /* Ajuste padding */
+    /* Tamaños de fuente del original */
+    /* h1-h6, p, etc. heredan de 768px o base si no se especifican */
+
+    header { min-height: 60px; } /* Ajuste altura mínima */
+    .logo-mobile { max-height: 115px; } /* Logo más pequeño */
+    .mobile-menu-button { font-size: 1.6rem; } /* Botón más pequeño */
+
+    .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; } /* Original */
+
+    .about-card-contenido h2, .servicio-card-contenido h2 { font-size: 1.15rem; } /* Original */
+
+    /* Ajuste tamaño iconos en info-servicios para pantallas muy pequeñas */
+    .servicio-icono {
+        max-height: 300px; /* Iconos más pequeños */
+    }
+
+    /* Ajustes formulario heredados del original */
+    .formulario-contacto { padding: 1.2rem; }
+     .formulario-contacto input, .formulario-contacto textarea { font-size: 0.95rem; }
+
+} /* ========= FIN BLOQUE MODIFICADO (@media max-width: 576px) ========= */
+/* ============================================ */
+
 
 /* ============================================================ */
-/* FIN DEL BLOQUE PARA AÑADIR AL FINAL DE style.css             */
+/* FIN DEL ARCHIVO CSS                                          */
 /* ============================================================ */
