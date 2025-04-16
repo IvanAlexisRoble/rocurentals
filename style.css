@@ -1,4 +1,4 @@
-/* style.css - Rediseñado inspirado en WeGuest */
+
 
 /* --- Reset Básico y Fuentes --- */
 
@@ -298,7 +298,7 @@ nav a.active {
     text-align: center; /* ORIGINAL */
 }
 .propiedad h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #0056b3; } /* ORIGINAL */
-.propiedad p { font-size: 0.95rem; margin-bottom: 0.8rem; color: #495057;line-height: 1.5; } /* ORIGINAL */
+.propiedad p { font-size: 0.95rem; margin-bottom: 0.8rem; color: #495057;line-height: 2; } /* ORIGINAL */
 .propiedad .precio {
     font-weight: 600;
     color: #333;
@@ -350,6 +350,7 @@ nav a.active {
     margin-bottom: 1rem;
     color: #495057;
     flex-grow: 1;
+    line-height: 1.5; /* ORIGINAL */
 }
 .servicio-card-contenido ul {
     list-style: disc; /* ORIGINAL */
@@ -467,6 +468,7 @@ nav a.active {
     margin-bottom: 1rem;
     color: #495057;
     flex-grow: 1;
+    line-height: 2;
 }
 .about-card-contenido p:last-of-type {
     flex-grow: 0;
@@ -479,7 +481,8 @@ nav a.active {
     display: inline-block;
     max-width: 100%;
     color: #495057;
-    font-size: 0.95rem; /* ORIGINAL */
+    font-size: 0.95rem;
+    line-height: 2; /* ORIGINAL */
 }
 .about-card-contenido li {
     margin-bottom: 0.6rem;
