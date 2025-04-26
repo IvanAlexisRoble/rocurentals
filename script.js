@@ -18,7 +18,7 @@ if (contactForm) { // Asegúrate de que el formulario existe antes de añadir el
     }
 
     // URL de tu Aplicación Web de Google Apps Script
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw9sDIe3JDr-LxRRcTg6fDMRhTLfiQCSALNbFlZHcPvZ-y7MQGTaWl4KC2mtR1ecImn/exec'; // Asegúrate que esta URL sea correcta
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyLuqGMmCYsSMupT6Aqviqh975kc6Mln7IBn0Y9419rZ_VukuF-5Ud8jIlxKb0M5ceM/exec'; // Asegúrate que esta URL sea correcta
 
     const formData = new FormData(contactForm);
 
