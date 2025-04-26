@@ -60,9 +60,9 @@ header .container {
     justify-content: space-between; /* Mantenido */
     align-items: center; /* Mantenido */
     margin-left: 0px;   /* Mantenido */
-    padding-left: 1rem;  /* Añadido padding por si acaso */
+    padding-left: 0rem;  /* Añadido padding por si acaso */
     margin-right: 0px;  /* Mantenido */
-    padding-right: 1rem; /* Añadido padding por si acaso */
+    padding-right: 0rem; /* Añadido padding por si acaso */
     width: 100%; /* Asegura ancho completo */
     gap: 1rem; /* Añadido espacio entre elementos del header */
 }
