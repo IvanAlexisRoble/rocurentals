@@ -49,29 +49,34 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-index: 1000;
-    max-height: 50px; /* ORIGINAL */
+    z-index: 1000; /* Mantenido */
+    /* Quita o ajusta max-height si limitaba el tamaño */
+    /* max-height: 50px; */ /* Comentado o eliminado */
+    min-height: 55px; /* Añadido para asegurar espacio vertical mínimo */
 }
 
 header .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 0px;   /* ORIGINAL */
-    padding-left: 0%;  /* ORIGINAL */
-    margin-right: 0px;  /* ORIGINAL */
-    padding-right: 0%; /* ORIGINAL */
-    /* width: 100%; (Implícito por defecto o heredado) */
+    justify-content: space-between; /* Mantenido */
+    align-items: center; /* Mantenido */
+    margin-left: 0px;   /* Mantenido */
+    padding-left: 1rem;  /* Añadido padding por si acaso */
+    margin-right: 0px;  /* Mantenido */
+    padding-right: 1rem; /* Añadido padding por si acaso */
+    width: 100%; /* Asegura ancho completo */
+    gap: 1rem; /* Añadido espacio entre elementos del header */
 }
 
 /* --- LOGO STYLES --- */
 .logo {
     line-height: 0;
+    flex-shrink: 0;
+    
   }
 
 .logo-desktop {
       display: inline-block;
-      max-width: 800px;
+      max-width: 500px;
       height: 50px;
       vertical-align: middle;
   }
@@ -82,6 +87,12 @@ header .container {
       height: auto;
       vertical-align: middle;
   }
+  #google_translate_element {
+    /* Estilos básicos añadidos en el HTML, puedes refinar aquí */
+    /* Ejemplo: Asegurar que no sea demasiado ancho */
+     max-width: 150px; /* Ajusta según necesites */
+     margin-left: auto; /* Intenta empujarlo a la derecha si space-between no es suficiente */
+    }
 
 nav ul { list-style: none; display: flex; }
 nav ul li { margin-left: 2rem; }
@@ -655,7 +666,13 @@ nav a.active {
         padding: 0.4rem;
         margin-left: 0; /* Quitar margen izquierdo explícito */
     }
-
+    #google_translate_element {
+        order: 4; /* Widget al final en el flujo flex */
+        /* Ocultar en móvil si no cabe o se ve mal */
+        display: none;  /* Descomenta esto si quieres ocultarlo en móvil */
+        margin-left: 0; /* Quita el margen auto en móvil */
+        max-width: 100px; /* Limita más el ancho en móvil */
+        }
     /* --- Menú Desplegable --- */
     nav {
         order: 3; /* Colocar después del botón */
