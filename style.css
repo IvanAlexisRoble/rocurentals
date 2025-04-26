@@ -92,7 +92,8 @@ header .container {
     /* Ejemplo: Asegurar que no sea demasiado ancho */
      max-width: 150px; /* Ajusta según necesites */
      margin-left: auto; /* Intenta empujarlo a la derecha si space-between no es suficiente */
-    }
+  } 
+    
 
 nav ul { list-style: none; display: flex; }
 nav ul li { margin-left: 2rem; }
