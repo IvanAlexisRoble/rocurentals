@@ -76,7 +76,7 @@ header .container {
 
 .logo-desktop {
       display: inline-block;
-      max-width: 500px;
+      max-width: 800px;
       height: 50px;
       vertical-align: middle;
   }
@@ -668,12 +668,8 @@ nav a.active {
         margin-left: 0; /* Quitar margen izquierdo explícito */
     }
     #google_translate_element {
-        /*order: 4; /* Widget al final en el flujo flex */
-        /* Ocultar en móvil si no cabe o se ve mal */
-        display: none;  /* Descomenta esto si quieres ocultarlo en móvil */
-        /*margin-left: 0; /* Quita el margen auto en móvil */
-        /*max-width: 100px; /* Limita más el ancho en móvil */
-        }
+        display: none;
+    }
     /* --- Menú Desplegable --- */
     nav {
         order: 3; /* Colocar después del botón */
