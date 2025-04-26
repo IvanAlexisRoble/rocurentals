@@ -64,7 +64,7 @@ header .container {
     margin-right: 0px;  /* Mantenido */
     padding-right: 0rem; /* Añadido padding por si acaso */
     width: 100%; /* Asegura ancho completo */
-    gap: 1rem; /* Añadido espacio entre elementos del header */
+    gap: 0rem; /* Añadido espacio entre elementos del header */
 }
 
 /* --- LOGO STYLES --- */
