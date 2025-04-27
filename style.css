@@ -87,12 +87,84 @@ header .container {
       height: auto;
       vertical-align: middle;
   }
-  #google_translate_element {
-    /* Estilos básicos añadidos en el HTML, puedes refinar aquí */
-    /* Ejemplo: Asegurar que no sea demasiado ancho */
-     max-width: 100px; /* Ajusta según necesites */
-     margin-left: auto; /* Intenta empujarlo a la derecha si space-between no es suficiente */
-  } 
+  /* --- Estilos para Personalizar Google Translate Widget --- */
+
+/* Contenedor principal del widget */
+#google_translate_element {
+    /* Ajusta el posicionamiento si es necesario para alinearlo bien en tu header */
+    /* margin-left: 1rem;  (Ya lo tenías inline, mejor aquí) */
+    /* align-self: center; (Para centrarlo verticalmente si el header es flex) */
+}
+
+/* Estilos para el modo SIMPLE del gadget */
+.goog-te-gadget-simple {
+    background-color: transparent !important; /* Quita fondo blanco */
+    border: none !important; /* Quita bordes */
+    display: flex !important; /* Usa flex para alinear icono y texto */
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem; /* Añade algo de espacio */
+}
+
+/* Enlace dentro del gadget */
+.goog-te-gadget-simple a.goog-te-menu-value {
+    color: #00003c !important; /* Color del texto (ajusta a tu header) */
+    text-decoration: none !important; /* Quita subrayado */
+    font-size: 1rem !important; /* Tamaño del texto (ajusta) */
+    font-weight: 600; /* Peso de la fuente (ajusta) */
+    padding: 0 0.5rem; /* Espacio entre icono y texto */
+    display: flex;
+    align-items: center;
+}
+.goog-te-gadget-simple a.goog-te-menu-value:hover {
+     color: #ffd700 !important; /* Color al pasar el ratón (ajusta) */
+}
+
+
+/* Oculta la flecha desplegable original si existe */
+.goog-te-gadget-simple span[style='text-decoration:underline'] {
+    display: none !important;
+}
+
+/* Oculta el texto "Powered by Google" si aparece */
+.goog-te-gadget-simple .goog-logo-link {
+    display: none !important;
+}
+#goog-gt-tt, .goog-te-balloon-frame {
+    display: none !important; /* Oculta tooltips y popups extraños */
+}
+body > .skiptranslate > iframe.goog-te-menu-frame {
+     box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important; /* Estilo opcional para el desplegable */
+     border-radius: 8px !important;
+}
+
+
+/* Añade el icono del GLOBO usando un pseudo-elemento */
+.goog-te-gadget-simple a.goog-te-menu-value::before {
+    content: '🌐'; /* Icono de globo unicode */
+    font-size: 1.2em; /* Tamaño del icono */
+    margin-right: 0.5em; /* Espacio a la derecha del icono */
+    display: inline-block;
+     /* Puedes ajustar el color si el unicode no toma el color del texto */
+     /* color: #00003c; */
+}
+
+/* --- Fin Estilos Google Translate --- */
+
+/* --- RECUERDA: Visibilidad en Móvil --- */
+@media (max-width: 768px) {
+    #google_translate_element {
+        /* Si quieres que SÍ se vea en móvil con el nuevo estilo,
+           COMENTA o BORRA la siguiente línea: */
+        display: none;
+
+        /* Si SÍ lo muestras en móvil, ajusta aquí su estilo si es necesario */
+        /* Ejemplo: order: 4; para ponerlo al final */
+        /* padding: 0.2rem; */
+    }
+
+     /* ... otros estilos móviles ... */
+}
     
 
 nav ul { list-style: none; display: flex; }
