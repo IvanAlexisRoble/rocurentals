@@ -803,8 +803,72 @@ nav a.active {
 
 } /* ========= FIN BLOQUE MODIFICADO (@media max-width: 576px) ========= */
 /* ============================================ */
+/* --- Estilos para Redes Sociales y WhatsApp en Footer --- */
 
+.footer-social {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
 
-/* ============================================================ */
-/* FIN DEL ARCHIVO CSS                                          */
-/* ============================================================ */
+.footer-social p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #e5e7eb; /* Color claro para el texto "Síguenos" */
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0; /* Margen inferior antes del botón WhatsApp */
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre iconos */
+}
+
+.social-icons li a img {
+    width: 32px; /* Ajusta el tamaño según tus iconos */
+    height: 32px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons li a:hover img {
+    opacity: 1;
+}
+
+.whatsapp-btn {
+    display: inline-flex; /* Para alinear icono y texto */
+    align-items: center;
+    background-color: #25D366; /* Color de WhatsApp */
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px; /* Bordes redondeados */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn img {
+    width: 20px; /* Tamaño icono WhatsApp */
+    height: 20px;
+    margin-right: 0.5rem; /* Espacio entre icono y texto */
+}
+
+.whatsapp-btn:hover {
+    background-color: #1DAE54; /* Color más oscuro al pasar el ratón */
+    color: #ffffff;
+}
+
+/* Ajustes responsivos para el footer social si es necesario */
+@media (max-width: 640px) {
+    .social-icons {
+        gap: 1.5rem; /* Un poco más de espacio en móviles */
+    }
+    .whatsapp-btn {
+       font-size: 0.9rem;
+       padding: 0.5rem 1rem;
+    }
+}
+
