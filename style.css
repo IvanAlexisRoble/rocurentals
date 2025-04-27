@@ -99,7 +99,7 @@ header .container {
     
 
 nav ul { list-style: none; display: flex; }
-nav ul li { margin-left: 2rem; }
+nav ul li { margin-left: 1rem; }
 nav a { font-weight: 500; color: #00003c; } /* ORIGINAL */
 nav a:hover { color: #ffd700; }
 nav a.active {
