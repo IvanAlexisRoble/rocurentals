@@ -1,60 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head><!-- Google tag (gtag.js) -->
+<head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-45T1SDT8LT"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-45T1SDT8LT');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-45T1SDT8LT');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión Alquiler Turístico Profesional en España | Rocu Rentals | ROCU RENTALS</title>
     <meta name="description" content="Maximiza la rentabilidad de tu propiedad en Alicante y España. Gestión integral de alquileres turísticos sin preocupaciones. ¡Infórmate!">
+    
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="144x144" href="/img/favicon-144x144.png">
-
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <meta name="theme-color" content="#ffffff">
 
-    <meta name="theme-color" content="#ffffff"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"></noscript>
     
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 22px;
+            line-height: 1;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            color: #212529;
+        }
+        h1 { font-size: 2.5rem; }
+        header {
+            background-color: #6cace4;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            min-height: 55px;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 0px;
+            padding-left: 0rem;
+            margin-right: 0px;
+            padding-right: 0rem;
+            width: 100%;
+            gap: 1rem;
+        }
+        .logo {
+            line-height: 0;
+            flex-shrink: 0;
+        }
+        .logo-desktop {
+            display: inline-block;
+            max-width: 800px;
+            height: 50px;
+            vertical-align: middle;
+        }
+        .logo-mobile {
+            display: none;
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+        #google_translate_element {
+            margin-left: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 1rem; }
+        nav a { font-weight: 500; color: #00003c; }
+        nav a:hover { color: #ffd700; }
+        nav a.active {
+            color: #ffd700;
+            font-weight: bold;
+            border-bottom: 2px solid #ffd700;
+        }
+        #hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.6);
+        }
+        .hero-content {
+            position: static;
+            transform: none;
+            padding: 20px;
+            border-radius: 0;
+            width: 90%;
+            max-width: 1024px;
+        }
+        .hero-content h1 { font-size: 3.8rem; margin-bottom: 1rem; color: #fff; }
+        .hero-content p { font-size: 1.5rem; font-weight: bold; line-height: 1.8; color: #ffffff; margin-bottom: 2rem; }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            border: 1px solid transparent;
+            font-size: 2rem;
+        }
+        .btn-primary {
+            background-color: #12cc1a;
+            border-color: #12cc1a;
+            color: #000000;
+        }
+        .btn-primary:hover {
+            background-color: #ffffff;
+            border-color: #ffffff;
+            color: #000000;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            header { max-height: none; height: auto; min-height: 55px; padding: 0rem; }
+            header .container { display: flex; align-items: center; justify-content: space-between; width: 100%; padding-left: 0rem; padding-right: 0rem; gap: 0rem; margin-left: 0; margin-right: 0; }
+            .logo { flex-grow: 0; flex-shrink: 1; max-width: calc(100% - 50px); overflow: hidden; display: flex; align-items: center; line-height: 0; }
+            .logo-desktop { display: none; }
+            .logo-mobile { display: block; width: auto; max-width: 100%; height: auto; max-height: 45px; }
+            .mobile-menu-button { display: block; flex-shrink: 0; padding: 0.4rem; margin-left: 0; }
+            #google_translate_element { display: none; }
+            nav { order: 3; width: 100%; position: absolute; top: 100%; left: 0; background-color: #6cace4; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 999; border-top: 1px solid rgba(255, 215, 0, 0.3); }
+            nav ul { display: none; flex-direction: column; width: 100%; padding: 0; margin: 0; }
+            nav ul.menu-visible { display: flex; }
+            nav ul li { margin: 0; width: 100%; text-align: center; }
+            nav ul li a { display: block; padding: 1rem; color: #00003c; border-bottom: 1px solid rgba(255, 255, 255, 0.15); font-weight: 600; font-size: 1.1rem; text-decoration: none; }
+            nav ul li:last-child a { border-bottom: none; }
+            nav ul li a:hover { background-color: rgba(255, 215, 0, 0.1); }
+            nav ul li a.active { color: #ffd700; font-weight: bold; background-color: rgba(0, 0, 60, 0.1); }
+            .hero-content { padding: 1.5rem; margin-top: 55px; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-content p { font-size: 1.1rem; }
+        }
+        @media (max-width: 576px) {
+            .container { max-width: 100%; padding-left: 0.75rem; padding-right: 0.75rem; }
+            header { min-height: 60px; }
+            .logo-mobile { max-height: 115px; }
+            .mobile-menu-button { font-size: 1.6rem; }
+            .btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <a href="index.html">  <img src="img/logo-rocu-rentals.png" alt="Logo de Rocu Rentals - Gestión Profesional de Alquileres Turísticos" class="logo-desktop" width="800" height="50">
-          <img src="img/logo-mobile.png" alt="Logo versión móvil de Rocu Rentals - Gestión Alquiler Vacacional" class="logo-mobile" width="1000" height="200">
-        </a> </div>
-    
-        <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false">
-            ☰
-        </button>
-        <nav>
-            <ul>
-                <li><a href="index.html"class="active">Inicio</a></li>
-                <li><a href="propiedades.html">Propiedades</a></li>
-                <li><a href="info-servicios.html">Servicios</a></li>
-                <li><a href="servicios.html">Tarifas</a></li>
-                <li><a href="sobre-nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <div id="google_translate_element" ></div>
-    </div>
-</header>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-rocu-rentals.png" alt="Logo de Rocu Rentals - Gestión Profesional de Alquileres Turísticos" class="logo-desktop" width="800" height="50">
+                    <img src="img/logo-mobile.png" alt="Logo versión móvil de Rocu Rentals - Gestión Alquiler Vacacional" class="logo-mobile" width="1000" height="200">
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false">
+                ☰
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="propiedades.html">Propiedades</a></li>
+                    <li><a href="info-servicios.html">Servicios</a></li>
+                    <li><a href="servicios.html">Tarifas</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div id="google_translate_element"></div>
+        </div>
+    </header>
 
     <main>
         <section id="hero">
-          <img src="img/hero-image-desktop.avif" alt="Imagen destacada de alquiler turístico" width="1920" height="1247" class="hero-image-desktop">
-          
+            <img src="img/hero-image-desktop.avif" alt="Imagen destacada de alquiler turístico" width="1920" height="1247" class="hero-image-desktop">
             <div class="hero-content">
                 <h1>Bienvenido a Rocu Rentals Convierte tu propiedad en una fuente de ingresos segura y rentable.</h1>
                 <p>Nos especializamos en la gestión de alquileres vacacionales en España, ayudando a propietarios como tú a maximizar sus ingresos sin preocupaciones. Con nuestra experiencia y dedicación, transformamos tu inmueble en un alojamiento turístico altamente rentable, asegurando que cada detalle esté cubierto para que tú solo disfrutes de los beneficios.</p>
@@ -63,14 +221,16 @@
         </section>
 
         <section id="servicios-destacados">
-            <div class="container"> <h2>¿Por qué elegir Rocu Rentals?</h2>
-                <div class="servicios-container"> <div class="servicio">
-                        <img src="img/servicio1.avif" alt="Icono gráfico simbolizando mayor rentabilidad en alquileres turísticos con Rocu Rentals" width="300" height="300" >
+            <div class="container">
+                <h2>¿Por qué elegir Rocu Rentals?</h2>
+                <div class="servicios-container">
+                    <div class="servicio">
+                        <img src="img/servicio1.avif" alt="Icono gráfico simbolizando mayor rentabilidad en alquileres turísticos con Rocu Rentals" width="300" height="300">
                         <h3>Mayor rentabilidad para tu propiedad</h3>
                         <p>El mercado turístico en España ofrece tarifas diarias más altas que el alquiler tradicional. Con nuestra estrategia optimizada, garantizamos la máxima ocupación y rentabilidad, especialmente en temporada alta.</p>
                     </div>
                     <div class="servicio">
-                        <img src="img/servicio2.avif" alt="Icono herramientas de gestión para alquiler vacacional integral ofrecido por Rocu Rentals" width="300" height="300" >
+                        <img src="img/servicio2.avif" alt="Icono herramientas de gestión para alquiler vacacional integral ofrecido por Rocu Rentals" width="300" height="300">
                         <h3>Gestión profesional integral</h3>
                         <p>Nos encargamos de todo: desde la promoción de tu propiedad en las principales plataformas como Airbnb, Booking.com y Vrbo, hasta la comunicación con los huéspedes, limpieza, mantenimiento y atención personalizada. ¡Tú solo recibes las ganancias!</p>
                     </div>
@@ -85,84 +245,76 @@
                         <p>Tienes el control absoluto sobre tu propiedad. Decide en qué fechas quieres alquilar y cuándo deseas utilizarla para tu disfrute personal. Nos adaptamos a tus necesidades.</p>
                     </div>
                     <div class="servicio">
-                      <img src="img/servicio5.avif" alt="Icono documento legal garantizando cumplimiento normativo en alquileres turísticos con Rocu Rentals" width="300" height="300" loading="lazy">
+                        <img src="img/servicio5.avif" alt="Icono documento legal garantizando cumplimiento normativo en alquileres turísticos con Rocu Rentals" width="300" height="300" loading="lazy">
                         <h3>Cumplimiento legal sin preocupaciones</h3>
                         <p>Gestionamos todas las licencias y requisitos legales para que tu alquiler turístico opere sin complicaciones y en conformidad con la normativa vigente.</p>
                     </div>
-                 </div>
-             </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-container">
-          <div class="footer-top">
-            <h2>¡Empieza hoy con Rocu Rentals!</h2>
-            <p>No dejes que tu propiedad pierda su potencial. Conviértela en una fuente de ingresos segura, sin los dolores de cabeza del alquiler tradicional.</p>
-            <p>Contáctanos hoy y descubre cómo podemos ayudarte a rentabilizar tu vivienda sin complicaciones.</p>
-            <a href="contacto.html" class="footer-btn">Contáctanos</a>
-          </div>
-      
-          <div class="footer-bottom">
-            <ul class="footer-links">
-              <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
-              <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
-              <li><a href="politica-cookies.html">Política de Cookies</a></li>
-              <li><a href="aviso-legal.html">Aviso Legal</a></li>
-            </ul>
-    
-            <div class="footer-social">
-              <p>Síguenos:</p>
-              <ul class="social-icons">
-               <li><a href="https://www.instagram.com/rocurentals/" target="_blank" aria-label="Instagram"><img src="img/instagram-icon.png" alt="Instagram"></a></li>
-               <li><a href="https://www.facebook.com/share/1AL9ZQfxNr/" target="_blank" aria-label="Facebook"><img src="img/facebook-icon.avif" alt="Facebook"></a></li>
-               <li><a href="https://www.tiktok.com/@rocurentals" target="_blank" aria-label="TikTok"><img src="img/tiktok-icon.png" alt="TikTok"></a></li>
-            </ul>
-            <a href="https://wa.me/+34644603966" class="whatsapp-btn" target="_blank">
-                <img src="img/whatsapp-icon.png" alt="WhatsApp"> Contactar por WhatsApp
-            </a>
+            <div class="footer-top">
+                <h2>¡Empieza hoy con Rocu Rentals!</h2>
+                <p>No dejes que tu propiedad pierda su potencial. Conviértela en una fuente de ingresos segura, sin los dolores de cabeza del alquiler tradicional.</p>
+                <p>Contáctanos hoy y descubre cómo podemos ayudarte a rentabilizar tu vivienda sin complicaciones.</p>
+                <a href="contacto.html" class="footer-btn">Contáctanos</a>
             </div>
-            <p class="footer-copy">© 2025 ROCU RENTALS. Todos los derechos reservados.</p>
-          </div>
+            <div class="footer-bottom">
+                <ul class="footer-links">
+                    <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                </ul>
+                <div class="footer-social">
+                    <p>Síguenos:</p>
+                    <ul class="social-icons">
+                        <li><a href="https://www.instagram.com/rocurentals/" target="_blank" aria-label="Instagram"><img src="img/instagram-icon.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/1AL9ZQfxNr/" target="_blank" aria-label="Facebook"><img src="img/facebook-icon.avif" alt="Facebook"></a></li>
+                        <li><a href="https://www.tiktok.com/@rocurentals" target="_blank" aria-label="TikTok"><img src="img/tiktok-icon.png" alt="TikTok"></a></li>
+                    </ul>
+                    <a href="https://wa.me/+34644603966" class="whatsapp-btn" target="_blank">
+                        <img src="img/whatsapp-icon.png" alt="WhatsApp"> Contactar por WhatsApp
+                    </a>
+                </div>
+                <p class="footer-copy">© 2025 ROCU RENTALS. Todos los derechos reservados.</p>
+            </div>
         </div>
-      </footer>
-      
+    </footer>
     
-
-    <script src="script.js"></script>
-    <!-- POPUP COOKIES -->
-<div id="cookie-popup" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #fff; color: #000; border: 1px solid #ccc; padding: 20px; border-radius: 12px; z-index: 9999; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); max-width: 600px; margin: auto;">
-    <p>Usamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptás nuestra <a href="/politica-cookies.html" target="_blank">Política de Cookies</a>.</p>
-    <button id="accept-cookies" style="margin-top: 10px; padding: 10px 20px; background-color: #024ea0; color: white; border: none; border-radius: 8px; cursor: pointer;">Aceptar</button>
-  </div>
-  
-  <script>
-    // Mostrar popup solo si no se aceptaron las cookies aún
-    window.onload = function() {
-      if (!localStorage.getItem("cookiesAccepted")) {
-        document.getElementById("cookie-popup").style.display = "block";
-      }
-  
-      document.getElementById("accept-cookies").onclick = function() {
-        localStorage.setItem("cookiesAccepted", true);
-        document.getElementById("cookie-popup").style.display = "none";
-      };
-    };
-  </script>
-  <script>
-    function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-    {
-    pageLanguage:  'es', // El idioma original de tu página
-    includedLanguages: 'en,fr,de,pt',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE 
+    <script src="script.js" defer></script>
+    <div id="cookie-popup" style="display: none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #fff; color: #000; border: 1px solid #ccc; padding: 20px; border-radius: 12px; z-index: 9999; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); max-width: 600px; margin: auto;">
+        <p>Usamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptás nuestra <a href="/politica-cookies.html" target="_blank">Política de Cookies</a>.</p>
+        <button id="accept-cookies" style="margin-top: 10px; padding: 10px 20px; background-color: #024ea0; color: white; border: none; border-radius: 8px; cursor: pointer;">Aceptar</button>
+    </div>
     
-  },
-  'google_translate_element'
-  );
-  }
-  </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
-    
+    <script>
+        // Mostrar popup solo si no se aceptaron las cookies aún
+        window.onload = function() {
+            if (!localStorage.getItem("cookiesAccepted")) {
+                document.getElementById("cookie-popup").style.display = "block";
+            }
+            document.getElementById("accept-cookies").onclick = function() {
+                localStorage.setItem("cookiesAccepted", true);
+                document.getElementById("cookie-popup").style.display = "none";
+            };
+        };
+    </script>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'es',
+                    includedLanguages: 'en,fr,de,pt',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE 
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 </body>
 </html>
