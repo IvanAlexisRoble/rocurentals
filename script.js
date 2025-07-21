@@ -12,7 +12,7 @@ if (contactForm) {
 
         const formData = new FormData(contactForm);
         // Asegúrate de que esta es la URL correcta de tu script de Google
-        const scriptURL = "https://script.google.com/macros/s/AKfycbw9sDIe3JDr-LxRRcTg6fDMRhTLfiQCSALNbFlZHcPvZ-y7MQGTaWl4KC2mtR1ecImn/exec";
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwcxGq5Kz6BkSu2wf4D-lB0aILETGiZWRDQr3UX9YuV4IftmcGqTXB3mCJaJ-lE7a81/exec";
 
         fetch(scriptURL, { method: "POST", body: formData })
             .then(response => {
